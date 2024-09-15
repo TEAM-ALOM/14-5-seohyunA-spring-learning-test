@@ -56,7 +56,6 @@ Content-Type: application/json
 <br>
 
 ### 참조
-- [Spring - ResponseEntity](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/responseentity.html)
 - [Spring - @RequestBody](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/requestbody.html)
 
 <br>
@@ -105,6 +104,9 @@ Content-Type: application/json
 - 테스트 메서드: `cholog.CRUDTest.read`
 - 수행 방법
   - `cholog.MemberController.read` 을 이용하여 학습 테스트를 성공시키세요.
+
+### 참조
+- [Spring - ResponseEntity](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/responseentity.html)
 
 <br>
 
