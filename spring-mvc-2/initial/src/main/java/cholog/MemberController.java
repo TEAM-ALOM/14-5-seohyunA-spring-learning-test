@@ -41,7 +41,7 @@ public class MemberController {
             .orElseThrow(RuntimeException::new);
 
         member.update(new_member);
-        return null;
+        return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/members/{id}")
