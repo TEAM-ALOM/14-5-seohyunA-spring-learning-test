@@ -23,10 +23,11 @@ public class MemberController {
         return ResponseEntity.created(URI.create("/members/" + newMember.getId())).build();
     }
 
+    @ResponseBody
     @GetMapping("/members")
     public ResponseEntity<List<Member>> read() {
         // TODO: 저장된 모든 member 정보를 반환한다.
-        return null;
+        return ResponseEntity.ok().body(members);
     }
 
     @PutMapping("/members/{id}")
