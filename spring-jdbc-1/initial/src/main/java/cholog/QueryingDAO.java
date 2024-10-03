@@ -30,8 +30,8 @@ public class QueryingDAO {
      * public <T> T queryForObject(String sql, Class<T> requiredType)
      */
     public int count() {
-        //TODO : customers 디비에 포함되어있는 row가 몇개인지 확인하는 기능 구현
-        return 0;
+        int rowCount = jdbcTemplate.queryForObject("select count(*) from customers", Integer.class);
+        return rowCount;
     }
 
     /**
