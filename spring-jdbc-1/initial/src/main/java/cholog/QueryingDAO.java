@@ -38,8 +38,8 @@ public class QueryingDAO {
      * public <T> T queryForObject(String sql, Class<T> requiredType, @Nullable Object... args)
      */
     public String getLastName(Long id) {
-        //TODO : 주어진 Id에 해당하는 customers의 lastName을 반환
-        return null;
+        String lastName = jdbcTemplate.queryForObject("select last_name from customers where id = ?", String.class, id);
+        return lastName;
     }
 
     /**
