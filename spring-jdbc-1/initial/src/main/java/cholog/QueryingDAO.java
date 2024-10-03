@@ -53,8 +53,8 @@ public class QueryingDAO {
      */
     public List<Customer> findAllCustomers() {
         String sql = "select id, first_name, last_name from customers";
-        //TODO : 저장된 모든 Customers를 list형태로 반환
-        return null;
+        List<Customer> customers = jdbcTemplate.query(sql, actorRowMapper);
+        return customers;
     }
 
     /**
