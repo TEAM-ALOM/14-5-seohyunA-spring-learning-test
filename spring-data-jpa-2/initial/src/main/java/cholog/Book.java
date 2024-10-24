@@ -2,6 +2,7 @@ package cholog;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -14,6 +15,9 @@ public class Book {
     @ManyToOne
     @JoinColumn(name="publisher", nullable = false)
     private Publisher publisher;
+
+    @ManyToMany
+    private Set<Author> authors = new HashSet<>();
 
     public Book() {
 
@@ -37,6 +41,6 @@ public class Book {
     }
 
     public Set<Author> getAuthors() {
-        return null;
+        return authors;
     }
 }
