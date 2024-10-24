@@ -165,7 +165,7 @@ class Person {
   @Id @GeneratedValue
   Long id;
 
-  @OneToOne(mappedBy = "author")
+  @OneToOne(mappedBy = "person")
   Author author;
 
   // ...
