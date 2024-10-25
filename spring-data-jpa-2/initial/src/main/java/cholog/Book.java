@@ -16,8 +16,8 @@ public class Book {
     @JoinColumn(name="publisher", nullable = false)
     private Publisher publisher;
 
-    @ManyToMany
-    private Set<Author> authors = new HashSet<>();
+    @OneToMany(mappedBy = "book")
+    private Set<BookAuthor> authors = new HashSet<>();
 
     public Book() {
 
@@ -40,7 +40,7 @@ public class Book {
         return publisher;
     }
 
-    public Set<Author> getAuthors() {
+    public Set<BookAuthor> getAuthors() {
         return authors;
     }
 }
